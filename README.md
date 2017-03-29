@@ -8,5 +8,5 @@
 
 
 demo效果图：
+<br>
 <img width="375" height="667" src="./images/emotion-input-view-1.png"/>
-![](./images/emotion-input-view-1.png)
