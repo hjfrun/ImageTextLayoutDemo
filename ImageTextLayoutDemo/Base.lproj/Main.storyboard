@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zHd-E4-9TT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--表情键盘-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oU-ga-sqc">
-                                <rect key="frame" x="20" y="70" width="35" height="21"/>
+                                <rect key="frame" x="20" y="114" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wDK-P4-2Xd">
-                                <rect key="frame" x="20" y="131" width="335" height="128"/>
+                                <rect key="frame" x="20" y="175" width="335" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="dhh-Vo-mcY"/>
@@ -46,6 +46,7 @@
                             <constraint firstItem="4oU-ga-sqc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="nrY-tr-DeE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="表情键盘" id="MMk-WG-UOM"/>
                     <connections>
                         <outlet property="label" destination="4oU-ga-sqc" id="Owo-bK-hwC"/>
                         <outlet property="textView" destination="wDK-P4-2Xd" id="7iJ-ub-6Uq"/>
@@ -53,7 +54,131 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="1210" y="37"/>
+        </scene>
+        <!--Convert View Controller-->
+        <scene sceneID="uZX-jZ-w0G">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="JlX-rU-NWS" customClass="ConvertViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2dD-bD-6MZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="508-G3-2Ja"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q05-J9-hTi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="你好[这是我乱写的不是表情]" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Gt-96-mFZ">
+                                <rect key="frame" x="20" y="84" width="335" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mzY-Py-AnG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcv-y5-qgi">
+                                <rect key="frame" x="20" y="202" width="77" height="30"/>
+                                <state key="normal" title="表情转文字"/>
+                                <connections>
+                                    <action selector="convert2TextClicked:" destination="JlX-rU-NWS" eventType="touchUpInside" id="WPP-RD-g0r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQw-m0-c0t">
+                                <rect key="frame" x="278" y="202" width="77" height="30"/>
+                                <state key="normal" title="文字转表情"/>
+                                <connections>
+                                    <action selector="convert2EmotionClicked:" destination="JlX-rU-NWS" eventType="touchUpInside" id="fhs-vb-HW4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文本内容" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rj-j9-DGv">
+                                <rect key="frame" x="20" y="248" width="335" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rcv-y5-qgi" firstAttribute="top" secondItem="9Gt-96-mFZ" secondAttribute="bottom" constant="18" id="0py-Af-McG"/>
+                            <constraint firstAttribute="trailing" secondItem="4rj-j9-DGv" secondAttribute="trailing" constant="20" id="BR9-kf-IfN"/>
+                            <constraint firstItem="9Gt-96-mFZ" firstAttribute="leading" secondItem="q05-J9-hTi" secondAttribute="leading" constant="20" id="Iqg-B3-XUH"/>
+                            <constraint firstItem="rcv-y5-qgi" firstAttribute="leading" secondItem="q05-J9-hTi" secondAttribute="leading" constant="20" id="Jv4-al-exA"/>
+                            <constraint firstAttribute="trailing" secondItem="ZQw-m0-c0t" secondAttribute="trailing" constant="20" id="Ztt-aV-QeI"/>
+                            <constraint firstItem="4rj-j9-DGv" firstAttribute="top" secondItem="rcv-y5-qgi" secondAttribute="bottom" constant="16" id="odI-Z0-Ty9"/>
+                            <constraint firstItem="9Gt-96-mFZ" firstAttribute="top" secondItem="2dD-bD-6MZ" secondAttribute="bottom" constant="20" id="pwH-tn-iJr"/>
+                            <constraint firstItem="ZQw-m0-c0t" firstAttribute="top" secondItem="9Gt-96-mFZ" secondAttribute="bottom" constant="18" id="vqI-FK-GCL"/>
+                            <constraint firstItem="4rj-j9-DGv" firstAttribute="leading" secondItem="q05-J9-hTi" secondAttribute="leading" constant="20" id="y1J-8o-8lK"/>
+                            <constraint firstAttribute="trailing" secondItem="9Gt-96-mFZ" secondAttribute="trailing" constant="20" id="yKs-tA-Hmp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="convert2EmotionButton" destination="ZQw-m0-c0t" id="x51-p3-gOA"/>
+                        <outlet property="convert2TextButton" destination="rcv-y5-qgi" id="yu4-Tq-lJq"/>
+                        <outlet property="label" destination="4rj-j9-DGv" id="RuI-bO-V0c"/>
+                        <outlet property="textView" destination="9Gt-96-mFZ" id="tDP-1m-M3v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ebh-GF-y9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="690"/>
+        </scene>
+        <!--主页面-->
+        <scene sceneID="9St-zP-Nc6">
+            <objects>
+                <viewController id="4xd-5i-Va2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="87g-1y-0Vg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ziv-LT-9W2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rba-yd-otL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLp-fg-lFm">
+                                <rect key="frame" x="87" y="122" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.64705882349999999" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="表情键盘示例"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Kwu-vg-GNf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxq-Xc-v0A">
+                                <rect key="frame" x="45" y="179" width="161" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.64705882349999999" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="表情转换"/>
+                                <connections>
+                                    <segue destination="JlX-rU-NWS" kind="show" id="tun-UL-eeM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="主页面" id="wQs-9k-9yB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5QW-T0-g5I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="141.67916041979012"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vcZ-RB-7z9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zHd-E4-9TT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aTk-4l-cje">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4xd-5i-Va2" kind="relationship" relationship="rootViewController" id="Tid-K9-aGs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fo9-Mb-nJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1644" y="524"/>
         </scene>
     </scenes>
 </document>

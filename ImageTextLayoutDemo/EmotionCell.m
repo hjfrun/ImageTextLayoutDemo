@@ -25,6 +25,7 @@
     self.imageView.image = [UIImage imageNamed:emotion.png];
 }
 
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

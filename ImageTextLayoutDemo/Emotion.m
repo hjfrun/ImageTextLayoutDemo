@@ -21,6 +21,7 @@
     return self;
 }
 
+
 + (instancetype)emotionWithDict:(NSDictionary *)dict
 {
     return [[self alloc] initWithDict:dict];

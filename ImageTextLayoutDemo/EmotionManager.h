@@ -13,4 +13,6 @@
 
 + (NSArray *)emotionList;
 
++ (Emotion *)emotionFromChs:(NSString *)chs;
+
 @end

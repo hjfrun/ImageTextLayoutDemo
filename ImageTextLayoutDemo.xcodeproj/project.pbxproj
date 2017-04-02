@@ -21,6 +21,8 @@
 		E1215C771E8BDE0400ED4AE0 /* EmotionInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1215C761E8BDE0400ED4AE0 /* EmotionInputView.xib */; };
 		E1215C7B1E8BE02500ED4AE0 /* EmotionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1215C791E8BE02500ED4AE0 /* EmotionCell.m */; };
 		E1215C7C1E8BE02500ED4AE0 /* EmotionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1215C7A1E8BE02500ED4AE0 /* EmotionCell.xib */; };
+		E175FF201E90EC27003BFE19 /* ConvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E175FF1F1E90EC27003BFE19 /* ConvertViewController.m */; };
+		E175FF231E90F439003BFE19 /* EmotionAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = E175FF221E90F439003BFE19 /* EmotionAttachment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,10 @@
 		E1215C781E8BE02500ED4AE0 /* EmotionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionCell.h; sourceTree = "<group>"; };
 		E1215C791E8BE02500ED4AE0 /* EmotionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotionCell.m; sourceTree = "<group>"; };
 		E1215C7A1E8BE02500ED4AE0 /* EmotionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmotionCell.xib; sourceTree = "<group>"; };
+		E175FF1E1E90EC27003BFE19 /* ConvertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertViewController.h; sourceTree = "<group>"; };
+		E175FF1F1E90EC27003BFE19 /* ConvertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvertViewController.m; sourceTree = "<group>"; };
+		E175FF211E90F439003BFE19 /* EmotionAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionAttachment.h; sourceTree = "<group>"; };
+		E175FF221E90F439003BFE19 /* EmotionAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotionAttachment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,10 @@
 				E1215C561E8BA37B00ED4AE0 /* AppDelegate.m */,
 				E1215C581E8BA37B00ED4AE0 /* ViewController.h */,
 				E1215C591E8BA37B00ED4AE0 /* ViewController.m */,
+				E175FF1E1E90EC27003BFE19 /* ConvertViewController.h */,
+				E175FF1F1E90EC27003BFE19 /* ConvertViewController.m */,
+				E175FF211E90F439003BFE19 /* EmotionAttachment.h */,
+				E175FF221E90F439003BFE19 /* EmotionAttachment.m */,
 				E1215C6D1E8BD89400ED4AE0 /* Emotion.h */,
 				E1215C6E1E8BD89400ED4AE0 /* Emotion.m */,
 				E1215C701E8BD9D500ED4AE0 /* EmotionManager.h */,
@@ -188,10 +198,12 @@
 			files = (
 				E1215C5A1E8BA37B00ED4AE0 /* ViewController.m in Sources */,
 				E1215C571E8BA37B00ED4AE0 /* AppDelegate.m in Sources */,
+				E175FF201E90EC27003BFE19 /* ConvertViewController.m in Sources */,
 				E1215C541E8BA37B00ED4AE0 /* main.m in Sources */,
 				E1215C721E8BD9D500ED4AE0 /* EmotionManager.m in Sources */,
 				E1215C6F1E8BD89400ED4AE0 /* Emotion.m in Sources */,
 				E1215C7B1E8BE02500ED4AE0 /* EmotionCell.m in Sources */,
+				E175FF231E90F439003BFE19 /* EmotionAttachment.m in Sources */,
 				E1215C751E8BDDF800ED4AE0 /* EmotionInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

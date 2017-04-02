@@ -30,4 +30,14 @@ static NSArray *_emotions;
     return _emotions;
 }
 
++ (Emotion *)emotionFromChs:(NSString *)chs
+{
+    for (Emotion *emotion in _emotions) {
+        if ([emotion.chs isEqualToString:chs]) {
+            return emotion;
+        }
+    }
+    return nil;
+}
+
 @end
