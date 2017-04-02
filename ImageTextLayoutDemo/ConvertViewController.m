@@ -10,7 +10,8 @@
 #import "Emotion.h"
 #import "EmotionManager.h"
 #import "EmotionInputView.h"
-#import "EmotionAttachment.h"
+//#import "EmotionAttachment.h"
+#import "NSTextAttachment+Emotion.h"
 
 @interface ConvertViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *convert2TextButton;
@@ -106,9 +107,13 @@
     if (!emotion) {
         return [[NSAttributedString alloc] initWithString:chs];
     }
-    EmotionAttachment *emotionAttach = [[EmotionAttachment alloc] init];
+    
+    NSTextAttachment *emotionAttach = [[NSTextAttachment alloc] init];
     emotionAttach.emotion = emotion;
     emotionAttach.bounds = CGRectMake(0, -5, self.label.font.lineHeight, self.label.font.lineHeight);
+//    EmotionAttachment *emotionAttach = [[EmotionAttachment alloc] init];
+//    emotionAttach.emotion = emotion;
+//    emotionAttach.bounds = CGRectMake(0, -5, self.label.font.lineHeight, self.label.font.lineHeight);
     return [NSAttributedString attributedStringWithAttachment:emotionAttach];
 }
 
@@ -126,7 +131,8 @@
         if (!obj) {
             [resultString appendString:[attriString attributedSubstringFromRange:range].string];
         } else {
-            EmotionAttachment *emotionAttach = (EmotionAttachment *)obj;
+            NSTextAttachment *emotionAttach = (NSTextAttachment *)obj;
+//            EmotionAttachment *emotionAttach = (EmotionAttachment *)obj;
             [resultString appendString:emotionAttach.emotion.chs];
         }
     }];
@@ -136,10 +142,13 @@
 
 - (void)insertTextView:(UITextView *)textView withEmotion:(Emotion *)emotion
 {
-    EmotionAttachment *emotionAttach = [[EmotionAttachment alloc] init];
+//    EmotionAttachment *emotionAttach = [[EmotionAttachment alloc] init];
+//    emotionAttach.emotion = emotion;
+//    emotionAttach.bounds = CGRectMake(0, -5, 20, 20);
+
+    NSTextAttachment *emotionAttach = [[NSTextAttachment alloc] init];
     emotionAttach.emotion = emotion;
     emotionAttach.bounds = CGRectMake(0, -5, 20, 20);
-
     NSAttributedString *attriStr = [NSAttributedString attributedStringWithAttachment:emotionAttach];
     
     NSMutableAttributedString *attriStrM = [[NSMutableAttributedString alloc] initWithAttributedString:textView.attributedText];
