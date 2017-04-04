@@ -33,6 +33,11 @@
         [strongSelf insertTextView:strongSelf.textView withEmotion:emotion];
     }];
     
+    [self.inputView setDeleteClickedBlock:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf.textView deleteBackward];
+    }];
+    
     self.textView.inputView = self.inputView;
 }
 

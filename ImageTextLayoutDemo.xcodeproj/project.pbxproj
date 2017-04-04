@@ -24,6 +24,7 @@
 		E1281E821E913B7F00547913 /* NSTextAttachment+Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = E1281E811E913B7F00547913 /* NSTextAttachment+Emotion.m */; };
 		E175FF201E90EC27003BFE19 /* ConvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E175FF1F1E90EC27003BFE19 /* ConvertViewController.m */; };
 		E175FF231E90F439003BFE19 /* EmotionAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = E175FF221E90F439003BFE19 /* EmotionAttachment.m */; };
+		E1A93BAF1E93DE06005B7E07 /* EmotionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A93BAE1E93DE06005B7E07 /* EmotionLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		E175FF1F1E90EC27003BFE19 /* ConvertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvertViewController.m; sourceTree = "<group>"; };
 		E175FF211E90F439003BFE19 /* EmotionAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionAttachment.h; sourceTree = "<group>"; };
 		E175FF221E90F439003BFE19 /* EmotionAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotionAttachment.m; sourceTree = "<group>"; };
+		E1A93BAD1E93DE06005B7E07 /* EmotionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionLayout.h; sourceTree = "<group>"; };
+		E1A93BAE1E93DE06005B7E07 /* EmotionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotionLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				E1215C731E8BDDF800ED4AE0 /* EmotionInputView.h */,
 				E1215C741E8BDDF800ED4AE0 /* EmotionInputView.m */,
 				E1215C761E8BDE0400ED4AE0 /* EmotionInputView.xib */,
+				E1A93BAD1E93DE06005B7E07 /* EmotionLayout.h */,
+				E1A93BAE1E93DE06005B7E07 /* EmotionLayout.m */,
 				E1215C781E8BE02500ED4AE0 /* EmotionCell.h */,
 				E1215C791E8BE02500ED4AE0 /* EmotionCell.m */,
 				E1215C7A1E8BE02500ED4AE0 /* EmotionCell.xib */,
@@ -202,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1215C5A1E8BA37B00ED4AE0 /* ViewController.m in Sources */,
+				E1A93BAF1E93DE06005B7E07 /* EmotionLayout.m in Sources */,
 				E1215C571E8BA37B00ED4AE0 /* AppDelegate.m in Sources */,
 				E175FF201E90EC27003BFE19 /* ConvertViewController.m in Sources */,
 				E1215C541E8BA37B00ED4AE0 /* main.m in Sources */,

@@ -31,10 +31,15 @@
     
     self.inputView = [EmotionInputView emotionInputView];
     __weak typeof(self) weakSelf = self;
-    [self.inputView setEmotionClickedBlock:^(Emotion *emotion) {
+    [weakSelf.inputView setEmotionClickedBlock:^(Emotion *emotion) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
         [strongSelf insertTextView:strongSelf.textView withEmotion:emotion];
+    }];
+    
+    [weakSelf.inputView setDeleteClickedBlock:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf.textView deleteBackward];
     }];
     
     self.textView.inputView = self.inputView;
@@ -77,7 +82,7 @@
     
     NSUInteger loc = 0;
     for (NSTextCheckingResult *result in resultsArray) {
-        NSLog(@"range : %@", NSStringFromRange(result.range));
+//        NSLog(@"range : %@", NSStringFromRange(result.range));
         
         NSUInteger length = result.range.location - loc;
         

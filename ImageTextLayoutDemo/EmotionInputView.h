@@ -13,6 +13,7 @@
 @interface EmotionInputView : UIView
 
 @property (nonatomic, strong) void (^emotionClickedBlock)(Emotion *emotion);
+@property (nonatomic, strong) void (^deleteClickedBlock)();
 
 + (instancetype)emotionInputView;
 
